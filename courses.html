@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Digital Marketing Courses | Robot Genie</title>
+
+  <meta
+    name="description"
+    content="Explore Robot Genie digital marketing courses including SEO, Social Media Marketing, Google Ads, Content Marketing and Analytics."
+  >
+
+  <meta
+    name="keywords"
+    content="digital marketing course, SEO course, social media marketing, Google Ads, PPC, content marketing, Robot Genie"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ================================
+       COURSES PAGE ONLY
+       ================================ */
+
+    .courses-page {
+      padding: 70px 0 90px;
+    }
+
+    .courses-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 55px;
+    }
+
+    .courses-heading .eyebrow {
+      color: #32e0ff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .courses-heading h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      margin-bottom: 18px;
+    }
+
+    .courses-heading p {
+      color: #aaa8bb;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* IMPORTANT:
+       align-items:start prevents one opened card
+       from stretching all cards in the same row.
+    */
+
+    .courses-grid {
+      width: min(1200px, 92%);
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 28px;
+
+      align-items: start;
+    }
+
+    .course-card {
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(20, 20, 43, 0.98),
+        rgba(8, 8, 24, 0.98)
+      );
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      align-self: start;
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+
+      border-color: rgba(50, 224, 255, 0.35);
+
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.28),
+        0 0 25px rgba(50, 224, 255, 0.05);
+    }
+
+    .course-image {
+      width: 100%;
+      height: 210px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    .course-content {
+      padding: 25px;
+    }
+
+    .course-content h2 {
+      font-size: 22px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .course-content > p {
+      color: #aaa8bb;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 17px;
+    }
+
+    .course-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-bottom: 20px;
+    }
+
+    .course-tag {
+      display: inline-block;
+
+      padding: 6px 11px;
+
+      border-radius: 30px;
+
+      background: rgba(50, 224, 255, 0.08);
+
+      color: #7feaff;
+
+      font-size: 12px;
+    }
+
+    /* Details button */
+
+    .details-btn {
+      width: 100%;
+
+      border: 1px solid rgba(255, 255, 255, 0.14);
+
+      background: rgba(255, 255, 255, 0.035);
+
+      color: white;
+
+      padding: 13px 18px;
+
+      border-radius: 13px;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: 0.2s ease;
+    }
+
+    .details-btn:hover {
+      border-color: #32e0ff;
+
+      background: rgba(50, 224, 255, 0.08);
+    }
+
+    /* Course details */
+
+    .course-details {
+      display: none;
+
+      margin-top: 20px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .course-details.show {
+      display: block;
+    }
+
+    .course-details h3 {
+      font-size: 18px;
+
+      margin-bottom: 10px;
+    }
+
+    .course-details ul {
+      padding-left: 18px;
+
+      margin-bottom: 22px;
+    }
+
+    .course-details li {
+      color: #aaa8bb;
+
+      font-size: 14px;
+
+      margin-bottom: 7px;
+    }
+
+    /* Application form */
+
+    .application-form {
+      background: rgba(255, 255, 255, 0.025);
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      border-radius: 16px;
+
+      padding: 20px;
+    }
+
+    .application-form h4 {
+      font-size: 17px;
+
+      margin-bottom: 6px;
+    }
+
+    .application-form .form-subtitle {
+      color: #aaa8bb;
+
+      font-size: 13px;
+
+      margin-bottom: 18px;
+    }
+
+    .form-row {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+
+      margin-bottom: 12px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+
+      color: #eee;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+
+      background: #07182b;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      color: white;
+
+      border-radius: 10px;
+
+      padding: 12px;
+
+      font-family: inherit;
+
+      font-size: 13px;
+
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #32e0ff;
+
+      box-shadow: 0 0 0 3px rgba(50, 224, 255, 0.07);
+    }
+
+    .form-group textarea {
+      min-height: 95px;
+
+      resize: vertical;
+    }
+
+    .submit-course {
+      border: 0;
+
+      width: 100%;
+
+      padding: 13px 18px;
+
+      border-radius: 11px;
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      background: linear-gradient(
+        90deg,
+        #25dfff,
+        #665cff
+      );
+
+      transition: 0.2s ease;
+    }
+
+    .submit-course:hover {
+      transform: translateY(-2px);
+
+      box-shadow: 0 8px 25px rgba(50, 224, 255, 0.18);
+    }
+
+    .success-message {
+      display: none;
+
+      color: #55e6a5;
+
+      font-size: 13px;
+
+      margin-top: 10px;
+
+      text-align: center;
+    }
+
+    /* ================================
+       RESPONSIVE
+       ================================ */
+
+    @media (max-width: 1000px) {
+
+      .courses-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .courses-page {
+        padding: 50px 0 70px;
+      }
+
+      .courses-grid {
+        grid-template-columns: 1fr;
+
+        width: 92%;
+
+        gap: 22px;
+      }
+
+      .course-image {
+        height: 200px;
+      }
+
+      .course-content {
+        padding: 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+    }
+  </style>
+
+<style id="courses-responsive-layout">
+/* Courses page: preserve shared site design, add responsive layout only */
+.courses-page{
+  min-height: calc(100vh - 180px);
+}
+
+.courses-grid{
+  align-items:start;
+}
+
+@media (max-width: 1100px){
+  .courses-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media (max-width: 900px){
+  .nav-inner{
+    position:relative;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-links.open{
+    display:flex;
+    position:absolute;
+    top:74px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    gap:0;
+    padding:14px 18px;
+    background:rgba(5,5,15,.98);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:0 0 16px 16px;
+    box-shadow:0 18px 35px rgba(0,0,0,.35);
+    z-index:1000;
+  }
+
+  .nav-links.open a{
+    padding:12px 4px;
+  }
+
+  .menu-btn{
+    display:block !important;
+    border:1px solid rgba(255,255,255,.16);
+    background:rgba(255,255,255,.04);
+    color:#fff;
+    border-radius:10px;
+    width:42px;
+    height:42px;
+    font-size:22px;
+    cursor:pointer;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media (max-width: 650px){
+  .courses-page{
+    padding-top:45px;
+    padding-bottom:55px;
+  }
+
+  .courses-heading{
+    margin-bottom:34px;
+  }
+
+  .courses-heading h1{
+    font-size:34px;
+  }
+
+  .courses-heading p{
+    font-size:15px;
+  }
+
+  .courses-grid{
+    width:92% !important;
+    grid-template-columns:1fr !important;
+    gap:20px;
+  }
+
+  .course-image{
+    height:190px;
+  }
+
+  .course-content{
+    padding:20px;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+  }
+
+  .footer-right{
+    text-align:left;
+  }
+
+  .policy-links{
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  }
+}
+</style>
+
+
+<style id="courses-modal-responsive">
+@media (max-width: 650px){
+  .course-apply-modal{padding:10px !important;}
+  .course-apply-box{width:100% !important;max-height:94vh !important;border-radius:18px !important;}
+  .course-apply-content{padding:25px 18px !important;}
+  .course-apply-content .modal-form-grid,
+  .course-apply-content .form-row{
+    grid-template-columns:1fr !important;
+  }
+}
+</style>
+
+
+<style id="courses-modal-fixed">
+.course-modal-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.74);backdrop-filter:blur(5px);overflow:auto;}
+.course-modal-box{position:relative;width:min(720px,100%);max-height:calc(100vh - 48px);overflow:auto;background:linear-gradient(180deg,rgba(20,20,43,.99),rgba(8,8,24,.99));border:1px solid rgba(50,224,255,.25);border-radius:20px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.55),0 0 35px rgba(50,224,255,.08);}
+.course-modal-box .modal-close{position:absolute;top:12px;right:14px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-size:24px;line-height:1;cursor:pointer;}
+.course-modal-box .modal-close:hover{border-color:#32e0ff;color:#32e0ff;}
+.course-modal-box h3{padding-right:45px;}
+.course-modal-box .application-form{margin-top:20px;}
+@media(max-width:650px){.course-modal-overlay{padding:10px}.course-modal-box{width:100%;max-height:94vh;padding:22px 18px;border-radius:18px}.course-modal-box .form-row{grid-template-columns:1fr!important;gap:0}}
+</style>
+
+<style id="courses-card-alignment-fix">
+/* Keep every course card in the same row perfectly aligned */
+.courses-grid{
+  align-items: stretch !important;
+}
+
+.course-card{
+  align-self: stretch !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-btn{
+  margin-top: auto;
+}
+
+/* Never let the hidden modal/details area affect card height */
+.course-details{
+  display: none !important;
+}
+
+.course-details.show{
+  display: block !important;
+}
+</style>
+
+</head>
+
+<body>
+<header class="navbar">
+<div class="container nav-inner">
+<a class="brand" href="index.html"><img src="robot-genie-logo.png" alt="Robot Genie logo"></a>
+<nav class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="about.html">About Us</a><a class="" href="courses.html">Courses</a><a class="" href="contact.html">Contact Us</a></nav>
+<button class="menu-btn" aria-label="Open navigation">☰</button>
+</div>
+</header>
+
+  <!-- ================================
+       COURSES PAGE
+       ================================ -->
+
+  <main class="courses-page">
+
+    <div class="courses-heading">
+
+      <div class="eyebrow">
+        OUR COURSES
+      </div>
+
+      <h1>
+        Choose Your Digital Marketing
+        Learning Path
+      </h1>
+
+      <p>
+        Explore practical digital marketing courses designed
+        to help you build modern, career-ready skills.
+      </p>
+
+    </div>
+
+
+    <div class="courses-grid">
+
+
+      <!-- =====================================
+           COURSE 1
+           ===================================== -->
+
+      <article class="course-card">
+
+        <img
+          class="course-image"
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85"
+          alt="Advanced Digital Marketing Course"
+          loading="lazy"
+        >
+
+        <div class="course-content">
+
+          <h2>
+            Advanced Digital Marketing
+          </h2>
+
+          <p>
+            Learn SEO, paid search, social media campaigns,
+            conversion tracking and digital marketing analytics.
+          </p>
+
+          <div class="course-tags">
+            <span class="course-tag">3 Months</span>
+            <span class="course-tag">Performance Marketing</span>
+          </div>
+
+          <button
+            class="details-btn"
+            type="button"
+            onclick="toggleCourse(this)"
+          >
+            View Details & Apply
+          </button>
+
+
+          <div class="course-details">
+
+            <h3>
+              What You'll Learn
+            </h3>
+
+            <ul>
+              <li>Search Engine Optimization</li>
+              <li>Google Ads & PPC</li>
+              <li>Social Media Marketing</li>
+              <li>Content Marketing</li>
+              <li>Google Analytics</li>
+              <li>Conversion Optimization</li>
+            </ul>
+
+
+            <div class="application-form">
+
+              <h4>
+                Apply for Advanced Digital Marketing
+              </h4>
+
+              <p class="form-subtitle">
+                Enter your details and our team will contact you.
+              </p>
+
+              <form
+                onsubmit="submitCourseForm(event, this)"
+              >
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Full Name</label>
+
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      required
+                    >
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>Phone</label>
+
+                    <input
+                      type="tel"
+                      placeholder="+91 9876543210"
+                      required
+                    >
+                  </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Email</label>
+
+                    <input
+                      type="email"
+                      placeholder="you@example.com"
+                      required
+                    >
+                  </div>
+
+
+                  <div class="form-group">
+                    <label>City</label>
+
+                    <input
+                      type="text"
+                      placeholder="Your city"
+                    >
+                  </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                  <label>
+                    Message
+                  </label>
+
+                  <textarea
+                    placeholder="Tell us your learning goal"
+                  ></textarea>
+
+                </div>
+
+
+                <button
+                  class="submit-course"
+                  type="submit"
+                >
+                  Submit Application
+                </button>
+
+                <div class="success-message">
+                  Application submitted successfully!
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================
+           COURSE 2
+           ===================================== -->
+
+      <article class="course-card">
+
+        <img
+          class="course-image"
+          src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&w=1000&q=85"
+          alt="SEO Mastery Course"
+          loading="lazy"
+        >
+
+        <div class="course-content">
+
+          <h2>
+            SEO Mastery
+          </h2>
+
+          <p>
+            Learn keyword research, on-page SEO, technical SEO,
+            content strategy and Search Console.
+          </p>
+
+          <div class="course-tags">
+            <span class="course-tag">2 Months</span>
+            <span class="course-tag">SEO</span>
+          </div>
+
+          <button
+            class="details-btn"
+            type="button"
+            onclick="toggleCourse(this)"
+          >
+            View Details & Apply
+          </button>
+
+
+          <div class="course-details">
+
+            <h3>
+              What You'll Learn
+            </h3>
+
+            <ul>
+              <li>Keyword Research</li>
+              <li>On-Page SEO</li>
+              <li>Technical SEO</li>
+              <li>SEO Content Strategy</li>
+              <li>Google Search Console</li>
+              <li>Link Building</li>
+            </ul>
+
+
+            <div class="application-form">
+
+              <h4>
+                Apply for SEO Mastery
+              </h4>
+
+              <p class="form-subtitle">
+                Enter your details and our team will contact you.
+              </p>
+
+              <form
+                onsubmit="submitCourseForm(event, this)"
+              >
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" placeholder="Your city">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+
+                  <textarea
+                    placeholder="Tell us your learning goal"
+                  ></textarea>
+                </div>
+
+                <button
+                  class="submit-course"
+                  type="submit"
+                >
+                  Submit Application
+                </button>
+
+                <div class="success-message">
+                  Application submitted successfully!
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================
+           COURSE 3
+           ===================================== -->
+
+      <article class="course-card">
+
+        <img
+          class="course-image"
+          src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1000&q=85"
+          alt="Social Media Marketing Course"
+          loading="lazy"
+        >
+
+        <div class="course-content">
+
+          <h2>
+            Social Media Marketing
+          </h2>
+
+          <p>
+            Learn content planning, audience growth,
+            social media strategy and campaign management.
+          </p>
+
+          <div class="course-tags">
+            <span class="course-tag">2 Months</span>
+            <span class="course-tag">Social Media</span>
+          </div>
+
+          <button
+            class="details-btn"
+            type="button"
+            onclick="toggleCourse(this)"
+          >
+            View Details & Apply
+          </button>
+
+
+          <div class="course-details">
+
+            <h3>
+              What You'll Learn
+            </h3>
+
+            <ul>
+              <li>Instagram Marketing</li>
+              <li>Facebook Marketing</li>
+              <li>LinkedIn Marketing</li>
+              <li>Content Strategy</li>
+              <li>Social Media Analytics</li>
+              <li>Paid Social Campaigns</li>
+            </ul>
+
+
+            <div class="application-form">
+
+              <h4>
+                Apply for Social Media Marketing
+              </h4>
+
+              <p class="form-subtitle">
+                Enter your details and our team will contact you.
+              </p>
+
+              <form
+                onsubmit="submitCourseForm(event, this)"
+              >
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" placeholder="Your city">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+
+                  <textarea
+                    placeholder="Tell us your learning goal"
+                  ></textarea>
+                </div>
+
+                <button
+                  class="submit-course"
+                  type="submit"
+                >
+                  Submit Application
+                </button>
+
+                <div class="success-message">
+                  Application submitted successfully!
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================
+           COURSE 4
+           ===================================== -->
+
+      <article class="course-card">
+
+        <img
+          class="course-image"
+          src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1000&q=85"
+          alt="Google Ads and PPC Course"
+          loading="lazy"
+        >
+
+        <div class="course-content">
+
+          <h2>
+            Google Ads & PPC
+          </h2>
+
+          <p>
+            Learn search advertising, keyword targeting,
+            bidding, CPC, conversions and campaign optimization.
+          </p>
+
+          <div class="course-tags">
+            <span class="course-tag">1.5 Months</span>
+            <span class="course-tag">PPC</span>
+          </div>
+
+          <button
+            class="details-btn"
+            type="button"
+            onclick="toggleCourse(this)"
+          >
+            View Details & Apply
+          </button>
+
+
+          <div class="course-details">
+
+            <h3>
+              What You'll Learn
+            </h3>
+
+            <ul>
+              <li>Google Ads Setup</li>
+              <li>Keyword Research</li>
+              <li>Search Campaigns</li>
+              <li>CPC & Bidding</li>
+              <li>Conversion Tracking</li>
+              <li>Campaign Optimization</li>
+            </ul>
+
+
+            <div class="application-form">
+
+              <h4>
+                Apply for Google Ads & PPC
+              </h4>
+
+              <p class="form-subtitle">
+                Enter your details and our team will contact you.
+              </p>
+
+              <form
+                onsubmit="submitCourseForm(event, this)"
+              >
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" placeholder="Your city">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+
+                  <textarea
+                    placeholder="Tell us your learning goal"
+                  ></textarea>
+                </div>
+
+                <button
+                  class="submit-course"
+                  type="submit"
+                >
+                  Submit Application
+                </button>
+
+                <div class="success-message">
+                  Application submitted successfully!
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================
+           COURSE 5
+           ===================================== -->
+
+      <article class="course-card">
+
+        <img
+          class="course-image"
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85"
+          alt="Content Marketing Course"
+          loading="lazy"
+        >
+
+        <div class="course-content">
+
+          <h2>
+            Content Marketing
+          </h2>
+
+          <p>
+            Learn SEO-friendly writing, content strategy,
+            blog creation and content distribution.
+          </p>
+
+          <div class="course-tags">
+            <span class="course-tag">2 Months</span>
+            <span class="course-tag">Content</span>
+          </div>
+
+          <button
+            class="details-btn"
+            type="button"
+            onclick="toggleCourse(this)"
+          >
+            View Details & Apply
+          </button>
+
+
+          <div class="course-details">
+
+            <h3>
+              What You'll Learn
+            </h3>
+
+            <ul>
+              <li>Content Strategy</li>
+              <li>SEO Blog Writing</li>
+              <li>Keyword Integration</li>
+              <li>Landing Page Copy</li>
+              <li>Social Media Content</li>
+              <li>Content Distribution</li>
+            </ul>
+
+
+            <div class="application-form">
+
+              <h4>
+                Apply for Content Marketing
+              </h4>
+
+              <p class="form-subtitle">
+                Enter your details and our team will contact you.
+              </p>
+
+              <form
+                onsubmit="submitCourseForm(event, this)"
+              >
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" placeholder="Your city">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+
+                  <textarea
+                    placeholder="Tell us your learning goal"
+                  ></textarea>
+                </div>
+
+                <button
+                  class="submit-course"
+                  type="submit"
+                >
+                  Submit Application
+                </button>
+
+                <div class="success-message">
+                  Application submitted successfully!
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- =====================================
+           COURSE 6
+           ===================================== -->
+
+      <article class="course-card">
+
+        <img
+          class="course-image"
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85"
+          alt="Digital Marketing Analytics Course"
+          loading="lazy"
+        >
+
+        <div class="course-content">
+
+          <h2>
+            Analytics & Tracking
+          </h2>
+
+          <p>
+            Learn Google Analytics, KPIs, UTM tracking,
+            reporting and data-driven marketing decisions.
+          </p>
+
+          <div class="course-tags">
+            <span class="course-tag">1.5 Months</span>
+            <span class="course-tag">Analytics</span>
+          </div>
+
+          <button
+            class="details-btn"
+            type="button"
+            onclick="toggleCourse(this)"
+          >
+            View Details & Apply
+          </button>
+
+
+          <div class="course-details">
+
+            <h3>
+              What You'll Learn
+            </h3>
+
+            <ul>
+              <li>Google Analytics</li>
+              <li>Marketing KPIs</li>
+              <li>UTM Tracking</li>
+              <li>Conversion Tracking</li>
+              <li>Marketing Reports</li>
+              <li>Data Analysis</li>
+            </ul>
+
+
+            <div class="application-form">
+
+              <h4>
+                Apply for Analytics & Tracking
+              </h4>
+
+              <p class="form-subtitle">
+                Enter your details and our team will contact you.
+              </p>
+
+              <form
+                onsubmit="submitCourseForm(event, this)"
+              >
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" placeholder="+91 9876543210" required>
+                  </div>
+
+                </div>
+
+                <div class="form-row">
+
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" placeholder="Your city">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                  <label>Message</label>
+
+                  <textarea
+                    placeholder="Tell us your learning goal"
+                  ></textarea>
+                </div>
+
+                <button
+                  class="submit-course"
+                  type="submit"
+                >
+                  Submit Application
+                </button>
+
+                <div class="success-message">
+                  Application submitted successfully!
+                </div>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <script>
+    function closeCourseModal() {
+      const modal = document.querySelector('.course-modal-overlay');
+      if (modal) modal.remove();
+      document.body.style.overflow = '';
+      document.querySelectorAll('.details-btn').forEach(function(btn){ btn.textContent = 'View Details & Apply'; });
+    }
+
+    function toggleCourse(button) {
+      const card = button.closest('.course-card');
+      const details = card.querySelector('.course-details');
+      if (document.querySelector('.course-modal-overlay')) { closeCourseModal(); return; }
+
+      const overlay = document.createElement('div');
+      overlay.className = 'course-modal-overlay';
+      const box = document.createElement('div');
+      box.className = 'course-modal-box';
+      const close = document.createElement('button');
+      close.type = 'button';
+      close.className = 'modal-close';
+      close.setAttribute('aria-label','Close');
+      close.innerHTML = '&times;';
+      close.addEventListener('click', closeCourseModal);
+
+      box.innerHTML = details.innerHTML;
+      box.prepend(close);
+      overlay.appendChild(box);
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+      button.textContent = 'Close';
+
+      overlay.addEventListener('click', function(e){
+        if(e.target === overlay) closeCourseModal();
+      });
+    }
+
+    function submitCourseForm(event, form) {
+      event.preventDefault();
+      const message = form.querySelector('.success-message');
+      if(message) message.style.display = 'block';
+      form.reset();
+    }
+  </script>
+
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-col contact-col">
+      <h3>GET IN TOUCH</h3>
+      <p>We’re here to help you with course details,<br>admissions, technical support, webinar<br>registration, and career guidance.</p>
+      <h4>Contact Us</h4>
+      <p>◉ &nbsp; www.robotgenie.in</p>
+      <p>✉ &nbsp; contact@robotgenie.in</p>
+      <p>♧ &nbsp; +91-9891707129</p>
+      <p>◷ &nbsp; Mon - Sat 10:00 AM - 7:00 PM</p>
+      <p>⌖ &nbsp; Laxmi Nagar, Delhi, 110092</p>
+      <div class="socials" aria-label="Social media links">
+        <a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Telegram">◔</a>
+      </div>
+      <div class="certificates">
+        <span>MSME</span><span>ISO<br>9001</span><span>GOVT<br>OF INDIA</span>
+      </div>
+      <div class="legal-id">GST: 07BZAPA2918M1ZH</div>
+      <div class="legal-id">UDYAM: UDYAM-DL-02-0061089</div>
+      <div class="legal-id">ISO Certificate: QMS/RB/9001/90076</div>
+    </div>
+
+    <div class="footer-col">
+      <h3>MENU</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-col courses-col">
+      <h3>OUR COURSES</h3>
+      <a href="courses.html#advanced">Digital Marketing Course (3 Month)</a>
+      <a href="courses.html#diploma">Digital Marketing Diploma (9 Month)</a>
+      <a href="courses.html#after12">Digital Marketing Course After 12th</a>
+      <a href="courses.html#web">Website Designing Course</a>
+      <a href="courses.html#graphic">Graphic Designing Course</a>
+      <a href="courses.html#ppc">PPC Training in Delhi</a>
+    </div>
+
+    <div class="footer-col footer-right">
+      <p>Career training aligned to how enterprise teams hire, review, and promote.</p>
+      <div class="policy-links"><a href="#">Refund Policy</a><span>|</span><a href="#">Privacy Policy</a><span>|</span><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<script id="courses-nav-responsive">
+(function(){
+  const menuBtn = document.querySelector(".menu-btn");
+  const nav = document.querySelector(".nav-links");
+
+  if(menuBtn && nav){
+    menuBtn.addEventListener("click", function(){
+      nav.classList.toggle("open");
+    });
+
+    nav.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        nav.classList.remove("open");
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
